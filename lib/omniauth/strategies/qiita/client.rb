@@ -3,7 +3,6 @@ module OmniAuth
     class Qiita
       class Client  < ::OAuth2::Client
         def get_token_with_json(params, access_token_opts = {}, access_token_class = AccessToken)
-          binding.pry
           opts = {:raise_errors => options[:raise_errors], :parse => params.delete(:parse)}
           if options[:token_method] == :post
             headers = params.delete(:headers)
